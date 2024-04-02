@@ -1,4 +1,3 @@
-import time
 import random
 from funcoes import *
 
