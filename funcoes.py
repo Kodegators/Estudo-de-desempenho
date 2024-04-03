@@ -11,4 +11,4 @@ def selectionSort(list):
         list[i], list[minimo] = list[minimo], list[i]
     fim = time.time()
     cronometro = fim-inicio
-    return f'{list} sua lista está em ordem, foram necessários {cronometro} segundos'
+    return f'{list}\nsua lista está em ordem, foram necessários {cronometro:.2f} segundos'
