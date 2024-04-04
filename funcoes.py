@@ -12,7 +12,7 @@ def selectionSort(list):
         list[i], list[minimo] = list[minimo], list[i]
     fim = time.time()
     cronometro = fim - inicio
-    return f'{list}\nsua liQuero mudar os botoes de login e logout para <a> tags porque e mais facil de passar as urls, mas como faço isso mantendo o mesmo estilo de css como se o a tag fosse um botao sta está em ordem, foram necessários {cronometro:.2f} segundos'
+    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos'
 
 
 def insertionSort(list):
