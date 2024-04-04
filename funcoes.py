@@ -1,5 +1,6 @@
 import time
 
+
 def selectionSort(list):
     n = len(list)
     inicio = time.time()
@@ -10,8 +11,8 @@ def selectionSort(list):
                 minimo = j
         list[i], list[minimo] = list[minimo], list[i]
     fim = time.time()
-    cronometro = fim-inicio
-    return f'{list}\nsua lista está em ordem, foram necessários {cronometro:.2f} segundos'
+    cronometro = fim - inicio
+    return f'{list}\nsua liQuero mudar os botoes de login e logout para <a> tags porque e mais facil de passar as urls, mas como faço isso mantendo o mesmo estilo de css como se o a tag fosse um botao sta está em ordem, foram necessários {cronometro:.2f} segundos'
 
 
 def insertionSort(list):
@@ -25,5 +26,19 @@ def insertionSort(list):
             x = x - 1
         list[x + 1] = key
     fim = time.time()
-    cronometro = fim-inicio
+    cronometro = fim - inicio
+    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos'
+
+
+def bubble_sort(list):
+    n = len(list)
+    inicio = time.time()
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if list[j] > list[j + 1]:
+                temp = list[j]
+                list[j] = list[j + 1]
+                list[j + 1] = temp
+    fim = time.time()
+    cronometro = fim - inicio
     return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos'
