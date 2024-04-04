@@ -8,7 +8,7 @@ def menu1():
         if gerar == '1':
             tam = int(input('Quantos numeros deseja gerar?: '))
             dados = random.sample(range(-100000000000000,100000000000000), tam)
-            print(f'{dados} Esses serão seus {tam} números.')
+            print(f'{dados}\nEsses serão seus {tam} números.')
             menu2(dados)
         
         elif gerar == '2':
@@ -29,7 +29,7 @@ def menu1():
                 
                 else:
                     dados.append(i)
-            print(f'{dados} Esses serão seus {len(dados)} números.')
+            print(f'{dados}\nEsses serão seus {len(dados)} números.')
             menu2(dados)
         
         else:
