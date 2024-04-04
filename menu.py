@@ -43,7 +43,7 @@ def menu2(lista):
         print(selectionSort(lista))
     
     elif escolha == '2':
-        print(insertionSort)
+        print(insertionSort(lista))
     
     elif escolha == '3':
         print('Ainda em desenvolvimento')
