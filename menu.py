@@ -6,9 +6,9 @@ def menu1():
     while True:
         gerar = input('\nMenu Inicial\n1 - Gerar lista\n2 - Inserir lista\n3 - Sair\nOque deseja fazer?: ')
         if gerar == '1':
-            tam = int('Quantos numeros deseja gerar?: ')
+            tam = int(input('Quantos numeros deseja gerar?: '))
             dados = random.sample(range(-100000000000000,100000000000000), tam)
-            print(f'{dados} Esses serão seus 10000 números.')
+            print(f'{dados} Esses serão seus {tam} números.')
             menu2(dados)
         
         elif gerar == '2':
@@ -43,7 +43,7 @@ def menu2(lista):
         print(selectionSort(lista))
     
     elif escolha == '2':
-        print('Ainda em desenvolvimento')
+        print(insertionSort)
     
     elif escolha == '3':
         print('Ainda em desenvolvimento')

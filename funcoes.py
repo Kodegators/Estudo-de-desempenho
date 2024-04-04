@@ -12,3 +12,18 @@ def selectionSort(list):
     fim = time.time()
     cronometro = fim-inicio
     return f'{list}\nsua lista está em ordem, foram necessários {cronometro:.2f} segundos'
+
+
+def insertionSort(list):
+    n = len(list)
+    inicio = time.time()
+    for i in range(1, n):
+        key = list[i]
+        x = i - 1
+        while x >= 0 and list[x] > key:
+            list[x + 1] = list[x]
+            x = x - 1
+        list[x + 1] = key
+    fim = time.time()
+    cronometro = fim-inicio
+    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos'
