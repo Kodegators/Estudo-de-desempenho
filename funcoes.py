@@ -1,6 +1,5 @@
 import time
 
-
 def selectionSort(list):
     n = len(list)
     inicio = time.time()
@@ -12,7 +11,7 @@ def selectionSort(list):
         list[i], list[minimo] = list[minimo], list[i]
     fim = time.time()
     cronometro = fim - inicio
-    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos'
+    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos usando o Selection Sort'
 
 
 def insertionSort(list):
@@ -27,10 +26,10 @@ def insertionSort(list):
         list[x + 1] = key
     fim = time.time()
     cronometro = fim - inicio
-    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos'
+    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos usando o Insertion Sort'
 
 
-def bubble_sort(list):
+def bubbleSort(list):
     n = len(list)
     inicio = time.time()
     for i in range(n):
@@ -41,4 +40,4 @@ def bubble_sort(list):
                 list[j + 1] = temp
     fim = time.time()
     cronometro = fim - inicio
-    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos'
+    return f'{list}\nSua lista está em ordem, foram necessários {cronometro:.2f} segundos usando o Bubble Sort'

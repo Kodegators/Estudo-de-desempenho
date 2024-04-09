@@ -4,7 +4,7 @@ from funcoes import *
 def menu1():
     dados = []
     while True:
-        gerar = input('\nMenu Inicial\n1 - Gerar lista\n2 - Inserir lista\n3 - Sair\nOque deseja fazer?: ')
+        gerar = input('\nTeste de Desempenho\nMenu Inicial\n1 - Gerar lista\n2 - Inserir lista\n3 - Sair\nOque deseja fazer?: ')
         if gerar == '1':
             tam = int(input('Quantos numeros deseja gerar?: '))
             dados = random.sample(range(-100000000000000,100000000000000), tam)
@@ -34,20 +34,25 @@ def menu1():
         
         else:
             print('Você escolheu sair.')
+            False
             return
 
 def menu2(lista):
+    dadosrep = lista
     escolha = input('\nOpções de organização\n1 - Selection Sort\n2 - Insertion Sort\n3 - Bubble Sort\n4 - Voltar ao menu inicial\nComo deseja organizar a lista?: ')
     
     if escolha == '1':
         print(selectionSort(lista))
+        return menu2(dadosrep)
     
     elif escolha == '2':
         print(insertionSort(lista))
-    
+        return menu2(dadosrep)
+
     elif escolha == '3':
-        print('Ainda em desenvolvimento')
-    
+        print(bubbleSort(lista))
+        return menu2(dadosrep)    
+
     else:
         menu1()
         
