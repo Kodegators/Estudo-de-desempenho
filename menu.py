@@ -2,14 +2,16 @@ import random
 from funcoes import *
 
 def menu1():
-    dados = []
+    dados = ()
+    
     while True:
         gerar = input('\nTeste de Desempenho\nMenu Inicial\n1 - Gerar lista\n2 - Inserir lista\n3 - Sair\nOque deseja fazer?: ')
         if gerar == '1':
             tam = int(input('Quantos numeros deseja gerar?: '))
             dados = random.sample(range(-100000000000000,100000000000000), tam)
             print(f'{dados}\nEsses serão seus {tam} números.')
-            menu2(dados)
+            while True:
+                menu2(dados)
         
         elif gerar == '2':
             dados = []
@@ -30,28 +32,29 @@ def menu1():
                 else:
                     dados.append(i)
             print(f'{dados}\nEsses serão seus {len(dados)} números.')
-            menu2(dados)
-        
+            while True:
+                menu2(dados)
+                
         else:
             print('Você escolheu sair.')
-            False
+            
             return
 
 def menu2(lista):
-    dadosrep = lista
+    dadosord = []
+    for i in lista:
+        dadosord.append(i)
+
     escolha = input('\nOpções de organização\n1 - Selection Sort\n2 - Insertion Sort\n3 - Bubble Sort\n4 - Voltar ao menu inicial\nComo deseja organizar a lista?: ')
     
     if escolha == '1':
-        print(selectionSort(lista))
-        return menu2(dadosrep)
-    
+        selectionSort(dadosord)
+        
     elif escolha == '2':
-        print(insertionSort(lista))
-        return menu2(dadosrep)
+        insertionSort(dadosord)
 
     elif escolha == '3':
-        print(bubbleSort(lista))
-        return menu2(dadosrep)    
+        bubbleSort(dadosord)
 
     else:
         menu1()
